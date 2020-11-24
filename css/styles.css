@@ -148,6 +148,10 @@ img {
   opacity: 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.current::after {
+  opacity: 1;
+  color: var(--accent-color);
+}
 .menu-link:hover::after {
   opacity: 1;
   color: var(--accent-color);
@@ -744,10 +748,16 @@ img {
   padding: 63px 24px;
   opacity: 0;
 }
-.image-thumb > .overlay:hover {
+.image-thumb:hover > .overlay {
   opacity: 1;
-  animation: animate1 2000ms infinite;
+  animation-name: animate1;
+  animation-duration: 2000ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-delay: 0ms;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
 }
 
 @keyframes animate1 {
